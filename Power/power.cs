@@ -11,11 +11,17 @@ class Power{
     Console.WriteLine("Recursive SOLUTION: {0} ^ {1} = {2}", number1, number2, result);
     res = Math.Pow(Convert.ToDouble(number1), Convert.ToDouble(number2));
     Console.WriteLine("Proof of Work: Math.Pow({0}, {1}) = {2}", number1, number2, res);
+
+    exit("\npress any key to exit the process...");
   }
   static long power(long n1, long n2){
     if(n2 == 0){
       return 1;
     }
     return n1 * power(n1, n2 - 1);
+  }
+  static void exit(string message){
+    Console.Write(message);
+    Console.ReadKey();
   }
 }

@@ -8,6 +8,8 @@ class Subtraction{
     number2 = Convert.ToInt32(Console.ReadLine());
     result = subtraction(number1, number2);
     Console.WriteLine("Solution: [{0}] - [{1}]  =  {2}", number1, number2, result);
+
+    exit("\npress any key to exit the process...");
   }
   static int subtraction(int n1, int n2){
     if(n2 == 0){
@@ -17,5 +19,9 @@ class Subtraction{
         return subtraction(n1 + 1, n2 + 1);
     } 
     return subtraction(n1 - 1, n2 - 1);
+  }
+  static void exit(string message){
+    Console.Write(message);
+    Console.ReadKey();
   }
 }
